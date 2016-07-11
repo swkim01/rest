@@ -1,15 +1,18 @@
 from bottle import route, run, request, install, static_file, template, redirect
-#from bottle import *
 from bottle_sqlite import SQLitePlugin
 from schedule import *
 
-@route('/css/bootstrap.css')
-def serve_bootcss():
-    return static_file("bootstrap.css", root='./css')
+@route('/js/<filename>')
+def js_static(filename):
+    return static_file(filename, root='./bootstrap/js')
 
-@route('/img/<filename>')
-def serve_image(filename):
-  return static_file(filename, root='./img/')
+@route('/css/<filename>')
+def css_static(filename):
+    return static_file(filename, root='./bootstrap/css')
+
+@route('/fonts/<filename>')
+def fonts_static(filename):
+  return static_file(filename, root='./bootstrap/fonts')
 
 @route('/')
 def home(db):
@@ -86,4 +89,4 @@ if __name__ == "__main__":
   sqlite = SQLitePlugin(dbfile='schedule.db')
   install(sqlite)
  
-  run(host='<HOST IP>', port=<PORT>)
+  run(host='192.168.0.21', port=5000)

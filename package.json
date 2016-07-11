@@ -1,0 +1,15 @@
+{
+  "name" : "node-rest-schedule-server",
+  "version" : "0.0.1",
+  "scripts" : {
+    "start" : "node schedule.js"
+  },
+  "dependencies" : {
+    "express" : "latest",
+    "body-parser" : "latest",
+    "body-parser-json" : "latest",
+    "sqlite3" : "latest",
+    "handlebars" : "latest",
+    "csv" : "latest"
+  }
+}

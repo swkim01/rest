@@ -1,7 +1,6 @@
 #from bottle import route, run, request, install, static_file, template, redirect
 import json
 from bottle import *
-#import bottle
 from bottle_sqlite import SQLitePlugin
 
 def get_schedules(db):
@@ -113,4 +112,4 @@ if __name__ == "__main__":
   sqlite = SQLitePlugin(dbfile='schedule.db')
   install(sqlite)
  
-  run(host='<HOST IP>', port=<PORT>)
+  run(host='192.168.0.21', port=5000)

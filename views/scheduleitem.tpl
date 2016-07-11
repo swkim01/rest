@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 <title>My Schedule</title>
 </head>
 <body>
@@ -20,7 +21,9 @@
 <input name="http_method" type="hidden" value="PUT" />
 <input type="submit" value="Submit">
 </form>
-<a href="/page/{{ prevlink }}">Prev</a> <a href="/"><i class="icon-home"></i></a> <a href="/page/{{ nextlink }}">Next</a>
+<a href="/page/{{ prevlink }}">Prev</a> <a href="/"><i class="glyphicon-home"></i></a> <a href="/page/{{ nextlink }}">Next</a>
 </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="/css/bootstrap.css" rel="stylesheet">
 <title>My Schedule</title>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -18,9 +18,9 @@
 </tr>
 % for item in schedules:
 %   if item['complete'] == 0:
-%     completestr = "icon-remove"
+%     completestr = "glyphicon-remove"
 %   elif item['complete'] == 1:
-%     completestr = "icon-ok"
+%     completestr = "glyphicon-ok"
 % end
 <tr>
   <td><a href="/page/{{ item['id'] }}">{{ item['name'] }}</a></td>
@@ -32,5 +32,7 @@
 %end
 </table>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
