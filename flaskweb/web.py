@@ -1,6 +1,6 @@
 import json
 from . import app, db, Schedule, get_schedules
-from flask import send_from_directory, render_template
+from flask import send_from_directory, render_template, redirect, url_for
 
 @app.route('/js/<path:filename>')
 def js_static(filename):

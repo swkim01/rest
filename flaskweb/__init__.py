@@ -18,8 +18,8 @@ class Schedule(db.Model):
     def __init__(self, id=1, name=None, deadline=None, description=None, complete=0):
         self.id = id
         self.name = name
-        self.deadline = birth
-        self.description = gender
+        self.deadline = deadline
+        self.description = description
         self.complete = complete
 
     def __repr__(self):
@@ -52,7 +52,8 @@ def create_schedule():
     #row = db.session.execute('SELECT * from schedule').fetchall()
     row = db.session.query(Schedule).all()
     if row:
-        id = row[-1]['id'] + 1
+        #id = row[-1]['id'] + 1
+        id = row[-1].id + 1
     else:
         id = 1
     import datetime
